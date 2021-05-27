@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -40,4 +43,21 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <!--<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyB2LLX79DP09_TulwQcRyQZVsWut87ph4A",
+        authDomain: "iliyan-firebase-test.firebaseapp.com",
+        databaseURL: "https://iliyan-firebase-test-default-rtdb.firebaseio.com",
+        projectId: "iliyan-firebase-test",
+        storageBucket: "iliyan-firebase-test.appspot.com",
+        messagingSenderId: "168482777576",
+        appId: "1:168482777576:web:efb7de204ee8c4f2f71c5d",
+        measurementId: "G-6J5VTRCMNP"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore()
+    db.settings({ timestampsInSnapshots: true }); 
+  </script>-->
 </html>

@@ -1,22 +1,38 @@
-import logo from './logo.svg';
+import Main from "./components/Main";
 import './App.css';
+import { Switch,Link,Route } from "react-router-dom";
 
+import NewSession from "./components/NewSession";
+import Chooser from "./components/Chooser"
+import Cheecker from "./components/Cheecker";
+import ExistingSession from "./components/ExistingSession";
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h3>App</h3>
+        <ul>
+          <li><Link to = "/">App</Link></li>
+          <li><Link to = "/newSession">New Session</Link></li>
+          <li><Link to = "/existingSession">Existing Session</Link></li>
+        </ul>
+        <Switch>
+          <Route exact path = "/">
+            <Main />
+          </Route>
+          <Route exact path = "/existingSession">
+            <ExistingSession />
+          </Route>
+          <Route path = "/newSession">
+            <NewSession />
+          </Route>
+          <Route path="/chooser">
+            <Chooser />
+          </Route>
+          <Route path="/cheecker">
+            <Cheecker />
+          </Route>
+        </Switch>
       </header>
     </div>
   );
